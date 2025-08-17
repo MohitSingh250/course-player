@@ -3,14 +3,15 @@ const {Router} = require("express")
 const courseRouter = Router()
 
 
-app.get("/courses/purchases", function(req,res){
+courseRouter.post("/purchases", function(req,res){
     res.json({
         message: "purchases endpoint"
     })
 })
-app.get("/courses", function(req,res){
+
+courseRouter.get("/preview", function(req,res){
     res.json({
-        message: "purchased courses endpoint"
+        message: "courses preview endpoint"
     })
 })
 
