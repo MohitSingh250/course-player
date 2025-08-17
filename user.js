@@ -1,5 +1,6 @@
-const express = require("express")
-const app = express()
+const {Router} = require("express")
+
+const userRouter = Router()
 
 app.post("/user/signup", function(req,res){
     res.json({
@@ -16,18 +17,7 @@ app.get("/user/courses", function(req,res){
         message: "courses endpoint"
     })
 })
-app.get("/courses/purchases", function(req,res){
-    res.json({
-        message: "purchases endpoint"
-    })
-})
-app.get("/courses", function(req,res){
-    res.json({
-        message: "purchased courses endpoint"
-    })
-})
 
-
-
-
-app.listen(3000)
+module.exports = {
+    userRouter: userRouter
+}
