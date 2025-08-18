@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 
+app.use(express.json())
 const {userRouter} = require("./routes/user.js")
 const {courseRouter} = require("./routes/course.js")
 const {adminRouter} = require("./routes/admin.js")
