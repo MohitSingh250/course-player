@@ -1,7 +1,6 @@
 const {Schema,default:mongoose} = require("mongoose")
 const ObjectId = mongoose.Types.ObjectId
-console.log("mongoose connected")
-mongoose.connect("mongodb+srv://mscrick01:achievemongodb@cluster0.ovfkuhl.mongodb.net/course-player")
+
 const userSchema = new Schema({
     firstName: String,
     lastName: String,
