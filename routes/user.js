@@ -2,7 +2,7 @@ const {Router} = require("express")
 const {userModel} = require("../db.js")
 const jwt = require("jsonwebtoken")
 const userRouter = Router()
-const jwt_secret_key = "asdfghjkl"
+const {jwt_user_key} = require('../config.js')
 
 userRouter.post("/signup", async function(req,res){
 
